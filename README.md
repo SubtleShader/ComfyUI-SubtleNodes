@@ -5,7 +5,7 @@ Custom Nodes for ComfyUI
 
 *PowerUp (DARE) Merge*
 
-Offers the DARE merge feature of A1111's UntitledMerger extension. It adds the difference, e.g. new capabilities, of the donor_model to the base_model. *Drop_rate* defines how much will be added. The higher the value, the more. *Addition_multiplier* adjusts the strength of the addition. Lower values don't alter the base_model as much & integrate new capabilities more smoothly without changing its style. *Seed* randomizes the added differences. Best set it to *fixed*. The six merge switches let you deactivate the addition for input, mid & output blocks as well as attention, convolution & normalization layers.
+Offers the DARE merge feature of A1111's UntitledMerger extension. It adds the difference (e.g. new capabilities, concepts & looks) of the donor_model to the base_model. *Drop_rate* defines how much will be added. The higher the value, the more. *Addition_multiplier* adjusts the strength of the addition. Lower values don't alter the base_model as much & integrate new capabilities more smoothly without changing its style. *Seed* randomizes the added differences. Best set it to *fixed*. The six merge switches let you deactivate the addition for input, mid & output blocks as well as attention, convolution & normalization layers.
 
 <br>
 
