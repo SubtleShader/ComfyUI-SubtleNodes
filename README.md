@@ -7,9 +7,10 @@ Custom Nodes for ComfyUI
 
 Offers the DARE merge feature of A1111's [UntitledMerger](https://github.com/groinge/sd-webui-untitledmerger) extension. It randomly masks parts of the difference between base_model and donor_model (e.g. new capabilities, concepts & looks) according to a dropout rate & seed, then scales and adds the selected difference to the base_model.
 
-*Drop_rate* defines if smaller or larger differences will be added. The higher the value, the more distinct the end result.
-*Addition_multiplier* adjusts the strength of the addition. Lower values down to zero don't alter the base_model as much & integrate new capabilities more smoothly without changing the style of the base_model. Negative values remove the difference between both.
-*Seed* randomizes the selected differences. Best set it to *fixed*. The six merge switches let you deactivate merging of input, mid & output blocks as well as attention, convolution & normalization layers.
+*Drop_rate* randomly discards a percentage of weight differences between the models. Higher values add more randomness, making the resulting model more distinct from the base_model.
+*Addition_multiplier* controls the strength of the added changes. Lower values blend more subtly, higher values amplify the donor’s influence, and negative values subtract the donor’s traits.
+*Seed* sets the randomization pattern for dropped weights. Keep it fixed for reproducible results.
+The six merge switches control whether merging is applied to input, mid, and output blocks, and whether it affects attention, convolution and normalization layers.
 
 <br>
 
