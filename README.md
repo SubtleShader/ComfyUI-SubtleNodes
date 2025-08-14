@@ -14,7 +14,7 @@ The six merge switches control whether merging is applied to input, mid, and out
 
 Increase *drop_rate* to add as much of donor_model as possible until side effects show up. Then increase *addition_multiplier* for more of donor or decrease to restore the old look of the base_model. Try different seeds if you are not satisfied. The goal is to add enough new traits while avoiding problems.
 
-Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint node to save the new checkpoint.
+Double click on the background in ComfyUI and enter powerup or dare to find it. Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint node to save the new checkpoint.
 
 This node was only tested with SDXL so far.
 
