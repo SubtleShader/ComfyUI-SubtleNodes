@@ -12,7 +12,7 @@ Offers the DARE merge feature of A1111's [UntitledMerger](https://github.com/gro
 *Seed* sets the randomization pattern for dropped weight differences. Keep it fixed for reproducible results.
 The six merge switches control whether merging is applied to input, mid, and output blocks, and whether it affects attention, convolution and normalization layers.
 
-Best to increase *drop_rate* to add as much of donor_model until you see side effects. Then increase *addition_multiplier* for more of donor or decrease to restore the old look of base_model if needed. Try different seeds if you are not satisfied.
+Increase *drop_rate* to add as much of donor_model until you see side effects. Then increase *addition_multiplier* for more of the donor or decrease to restore the old look of the base_model. Try different seeds if you are not satisfied.
 
 Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint node to save the new checkpoint.
 
