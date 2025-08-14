@@ -9,7 +9,7 @@ Offers the DARE merge feature of A1111's [UntitledMerger](https://github.com/gro
 
 *Drop_rate* randomly discards a percentage of weight differences between the models. Higher values keep less differences but amplifiy them more thus making the resulting model more distinct from the base_model.
 *Addition_multiplier* controls the strength of the added changes. Lower values blend more subtly, higher values increase the donor’s influence, and negative values subtract the donor’s traits.
-*Seed* sets the randomization pattern for dropped weights. Keep it fixed for reproducible results.
+*Seed* sets the randomization pattern for dropped weight differences. Keep it fixed for reproducible results.
 The six merge switches control whether merging is applied to input, mid, and output blocks, and whether it affects attention, convolution and normalization layers.
 
 Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint node to save the new checkpoint.
