@@ -12,6 +12,8 @@ Offers the DARE merge feature of A1111's [UntitledMerger](https://github.com/gro
 *Seed* sets the randomization pattern for dropped weights. Keep it fixed for reproducible results.
 The six merge switches control whether merging is applied to input, mid, and output blocks, and whether it affects attention, convolution and normalization layers.
 
+Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's model output to your usual workflow as you would do with a Load Checkpoint node.
+
 <br>
 
 **Installation**
