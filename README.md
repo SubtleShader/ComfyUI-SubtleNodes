@@ -1,7 +1,8 @@
 # ComfyUI-SubtleNodes
 Custom Nodes for ComfyUI
 
-<br>
+<br><img width="1283" height="713" alt="subtlenodes" src="https://github.com/user-attachments/assets/40ffcab4-28ac-499c-bb38-930e1ce79adc" />
+
 
 *DARE Merge*
 
@@ -26,7 +27,7 @@ Subtle Merge intelligently combines two checkpoints by analyzing how much each w
 
 *Donor_ratio* controls the baseline blend strength - how much donor to use overall. Zero means pure base model, one means pure donor model, and 0.5 is a fifty-fifty mix. 
 *Donor_factor* controls how much extra influence important weights get. At 1.0, highly important weights can reach up to 100% donor influence regardless of the donor_ratio setting. At 5.0 a lot of weights are transferred from the donor model at full strength. At 0.0, all weights are treated equally like a simple average merge. 
-*Importance_threshold* filters out noise - only weights that changed more than this amount get the importance boost, while everything else gets basic blending.
+*Importance_threshold* filters out noise. Only weights that changed more than this amount get the importance boost, while everything else gets basic blending.
 
 Start with *donor_ratio* at 0.5 and *donor_factor* at 1.0 for a balanced merge that respects important changes. If the result is too subtle, increase *donor_ratio* to pull more from the donor overall. If you're getting artifacts or the merge feels too aggressive, lower *donor_factor* to reduce how much important weights are amplified. The node automatically detects your GPU's VRAM and optimizes processing speed.
 
@@ -37,4 +38,4 @@ Both nodes automatically bake LoRA/LoKR patches before merging, so LoRAs/LoKRs g
 
 **Installation**
 
-Copy both file into the *custom_nodes* sub folder of ComfyUI. Don't create a sub folder for it there. Restart ComfyUI.
+Copy both file into the *custom_nodes* sub folder of ComfyUI. Don't create a sub folder for them there. Restart ComfyUI.
