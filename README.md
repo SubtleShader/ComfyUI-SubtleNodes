@@ -23,13 +23,13 @@ This node was only tested with SDXL checkpoints so far.
 
 *Subtle Merge*
 
-Subtle Merge intelligently combines two checkpoints by analyzing how much each weight changed between the base and donor models. Weights that changed significantly are considered "important" and get merged more strongly toward the donor, while minor changes are treated as noise and blended normally. This preserves the donor's key innovations while reducing artifacts from averaging everything equally.
+Subtle Merge intelligently combines two checkpoints by analyzing how much each weight changed between the base and donor models. Weights that changed significantly are considered "important" and get merged more strongly toward the donor, while minor changes are treated as noise and blended normally. This preserves the donor's key innovations without averaging everything equally.
 
 *Donor_ratio* controls the baseline blend strength - how much donor to use overall. Zero means pure base model, one means pure donor model, and 0.5 is a fifty-fifty mix. 
 *Donor_factor* controls how much extra influence important weights get. At 1.0, highly important weights can reach up to 100% donor influence regardless of the donor_ratio setting. At 5.0 a lot of weights are transferred from the donor model at full strength. At 0.0, all weights are treated equally like a simple average merge. 
 *Importance_threshold* filters out noise. Only weights that changed more than this amount get the importance boost, while everything else gets basic blending.
 
-Start with *donor_ratio* at 0.5 and *donor_factor* at 1.0 for a balanced merge that respects important changes. If the result is too subtle, increase *donor_ratio* to pull more from the donor overall. If you're getting artifacts or the merge feels too aggressive, lower *donor_factor* to reduce how much important weights are amplified. The node automatically detects your GPU's VRAM and optimizes processing speed.
+Start with *donor_ratio* at 0.5 and *donor_factor* at 1.0 for a balanced merge that respects important changes. If the result is too subtle, increase *donor_factor* to pull more from the donor overall. If the merge feels too aggressive, lower *donor_factor* to reduce how much important weights are amplified. The node automatically detects your GPU's VRAM and optimizes processing speed.
 
 **Usage**
 
