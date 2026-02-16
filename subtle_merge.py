@@ -1,8 +1,9 @@
 """Subtle Merge Node - Merges two checkpoints using importance-weighted merging."""
 
+
 # -----------------------------------------------------------------------------
 # 2026-02-16 (Release date)
-# - Initial working DARE Merge node implementation.
+# - Initial working node implementation.
 # - Added automatic LoRA/LoKR baking for donor model before merge
 # -----------------------------------------------------------------------------
 
