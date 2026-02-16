@@ -17,8 +17,6 @@ Increase *drop_rate* to add as much of donor_model as possible until side effect
 
 Double click on the background in ComfyUI and enter powerup or dare to find it. Add two Load Checkpoint nodes and connect them to the inputs of this node. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint node to save the new checkpoint.
 
-This node was only tested with SDXL checkpoints so far.
-
 <br>
 
 *Subtle Merge*
