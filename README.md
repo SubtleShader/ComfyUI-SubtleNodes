@@ -29,6 +29,8 @@ Subtle Merge intelligently combines two checkpoints by analyzing how much each w
 
 Start with *donor_ratio* at 0.5 and *donor_factor* at 1.0 for a balanced merge that respects important changes. If the result is too subtle, increase *donor_factor* to pull more from the donor overall. If the merge feels too aggressive, lower *donor_factor* to reduce how much important weights are amplified. The node automatically detects your GPU's VRAM and optimizes processing speed.
 
+<br>
+
 **Usage**
 
 Double click on the background in ComfyUI and enter DARE or Subtle to find each node. Add two Load Checkpoint or Load Diffusion Model nodes and connect them to the inputs. Connect the node's output to your usual workflow as you would do with a Load Checkpoint node. Connect the output to a Save Checkpoint/Model node to save the new checkpoint.
